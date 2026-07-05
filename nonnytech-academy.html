@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Nonnytech Academy — Learn to build AI-powered tools and professional websites. No coding experience required. Start earning immediately after training." />
+<meta name="keywords" content="AI training Nigeria, learn AI tools Awka, website development training Nigeria, tech skills Anambra, Nonnytech Academy" />
+<title>Nonnytech Academy — Master the High-Income Skills of the AI Era</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --ink:      #08090D;
+  --deep:     #0F1117;
+  --panel:    #161B26;
+  --raised:   #1C2333;
+  --rule:     rgba(255,255,255,0.07);
+  --ruleHi:   rgba(255,255,255,0.14);
+  --white:    #FFFFFF;
+  --silver:   #94A3B8;
+  --mist:     #64748B;
+  --lime:     #84CC16;
+  --limeHi:   #A3E635;
+  --amber:    #F59E0B;
+  --blue:     #3B82F6;
+  --green:    #22C55E;
+  --purple:   #8B5CF6;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ink);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 3px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5vw; height: 64px;
+  background: rgba(8,9,13,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-mark {
+  width: 32px; height: 32px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--lime), var(--limeHi));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; color: var(--ink);
+}
+.nav-name { font-weight: 700; font-size: 15px; color: var(--white); }
+.nav-sub { font-size: 10px; color: var(--mist); letter-spacing: 1px; text-transform: uppercase; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: var(--silver); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--lime); color: var(--ink);
+  padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 700;
+  text-decoration: none; transition: background 0.2s; letter-spacing: 0.3px;
+}
+.nav-cta:hover { background: var(--limeHi); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 120px 5vw 80px; position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(132,204,22,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 80% 70%, rgba(59,130,246,0.06) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(132,204,22,0.1); border: 1px solid rgba(132,204,22,0.3);
+  border-radius: 20px; padding: 5px 16px;
+  font-size: 12px; font-weight: 600; color: var(--lime); letter-spacing: 0.5px; margin-bottom: 28px;
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--lime);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+.hero-h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1.08; letter-spacing: -1px; margin-bottom: 24px; font-weight: 400;
+}
+.hero-h1 em { font-style: italic; color: var(--lime); }
+
+.hero-sub {
+  font-size: clamp(16px, 1.8vw, 19px); color: var(--silver);
+  max-width: 560px; line-height: 1.75; margin-bottom: 16px;
+}
+
+.hero-hook {
+  display: inline-flex; align-items: center; gap: 20px;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 12px 20px; margin-bottom: 36px; flex-wrap: wrap; gap: 16px;
+}
+.hook-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--silver); }
+.hook-item span { color: var(--lime); font-weight: 700; }
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+
+.btn-lime {
+  background: var(--lime); color: var(--ink);
+  padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 700;
+  text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-lime:hover { background: var(--limeHi); }
+
+.btn-outline {
+  background: transparent; border: 1px solid var(--ruleHi); color: var(--white);
+  padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 500;
+  text-decoration: none; transition: all 0.2s; font-family: inherit;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.05); }
+
+.hero-trust {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  padding-top: 36px; border-top: 1px solid var(--rule);
+}
+.trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--silver); }
+.trust-icon { font-size: 20px; }
+
+/* ── SECTIONS ── */
+section { padding: 96px 5vw; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 600; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--lime); margin-bottom: 14px;
+}
+.section-h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 46px); font-weight: 400; line-height: 1.15; margin-bottom: 16px;
+}
+.section-sub { color: var(--silver); font-size: 17px; max-width: 520px; line-height: 1.75; margin-bottom: 56px; }
+
+/* ── PROGRAMS ── */
+#programs { background: var(--deep); }
+
+.programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.program-card {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 36px 28px; position: relative; transition: transform 0.2s, border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.program-card:hover { transform: translateY(-4px); border-color: rgba(132,204,22,0.3); }
+.program-card.featured { border-color: rgba(132,204,22,0.25); background: linear-gradient(160deg, #161B26, #1A2235); }
+
+.program-badge {
+  position: absolute; top: -12px; left: 24px;
+  background: var(--lime); color: var(--ink);
+  font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 20px;
+}
+
+.program-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--mist); letter-spacing: 2px; margin-bottom: 16px;
+}
+.program-icon {
+  width: 52px; height: 52px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;
+}
+.program-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; font-weight: 400; margin-bottom: 10px;
+}
+.program-focus { font-size: 14px; color: var(--silver); line-height: 1.7; margin-bottom: 20px; flex: 1; }
+
+.program-highlights { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
+.program-highlights li {
+  display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--silver);
+}
+.program-highlights li::before { content: '✓'; color: var(--lime); font-weight: 700; font-size: 12px; }
+
+.program-cta {
+  display: block; text-align: center; padding: 12px; border-radius: 7px;
+  font-weight: 700; font-size: 14px; text-decoration: none; transition: opacity 0.2s; font-family: inherit;
+  border: none; cursor: pointer; margin-top: auto;
+}
+.program-cta.lime { background: var(--lime); color: var(--ink); }
+.program-cta.outline { border: 1px solid var(--rule); color: var(--white); background: transparent; }
+.program-cta:hover { opacity: 0.85; }
+
+.program-fee {
+  text-align: center; font-size: 12px; color: var(--mist); margin-top: 12px; font-weight: 500;
+}
+.program-fee span { color: var(--lime); font-weight: 700; }
+
+/* ── ADVANTAGE ── */
+#advantage { background: var(--ink); }
+
+.advantage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.advantage-card {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 32px 28px;
+  transition: border-color 0.2s;
+}
+.advantage-card:hover { border-color: rgba(132,204,22,0.2); }
+
+.advantage-icon {
+  width: 48px; height: 48px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px;
+}
+.advantage-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px; font-weight: 400; margin-bottom: 10px;
+}
+.advantage-desc { font-size: 14px; color: var(--silver); line-height: 1.75; }
+
+/* ── OUTCOMES ── */
+#outcomes { background: var(--deep); }
+
+.outcomes-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+}
+
+.outcomes-left { }
+.outcomes-right { }
+
+.outcome-item {
+  display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px;
+  padding-bottom: 28px; border-bottom: 1px solid var(--rule);
+}
+.outcome-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.outcome-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px; color: var(--lime); line-height: 1; flex-shrink: 0; min-width: 60px;
+}
+.outcome-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.outcome-desc { font-size: 14px; color: var(--silver); line-height: 1.7; }
+
+.quote-box {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 36px;
+}
+.quote-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; font-weight: 400; line-height: 1.5; color: var(--white);
+  margin-bottom: 20px; font-style: italic;
+}
+.quote-author { font-size: 13px; color: var(--mist); }
+.quote-author strong { color: var(--silver); }
+
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+.stat-box {
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 18px; text-align: center;
+}
+.stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px; color: var(--lime); line-height: 1;
+}
+.stat-label { font-size: 11px; color: var(--mist); margin-top: 5px; }
+
+/* ── FAQ ── */
+#faq { background: var(--ink); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 900px; }
+.faq-item {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 24px;
+}
+.faq-q { font-size: 15px; font-weight: 600; margin-bottom: 10px; color: var(--white); }
+.faq-a { font-size: 14px; color: var(--silver); line-height: 1.7; }
+
+/* ── ENROLL CTA ── */
+#enroll { background: var(--deep); }
+
+.enroll-wrap {
+  background: linear-gradient(135deg, #111A2E, #162030);
+  border: 1px solid rgba(132,204,22,0.2); border-radius: 16px;
+  padding: 72px 56px; text-align: center; max-width: 760px; margin: 0 auto;
+  position: relative; overflow: hidden;
+}
+.enroll-glow {
+  position: absolute; top: -40%; left: 50%; transform: translateX(-50%);
+  width: 400px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(132,204,22,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.enroll-icon { font-size: 48px; margin-bottom: 20px; position: relative; }
+.enroll-h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 400; margin-bottom: 16px; position: relative;
+}
+.enroll-sub { font-size: 16px; color: var(--silver); line-height: 1.7; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; position: relative; }
+.enroll-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+.enroll-note { font-size: 13px; color: var(--mist); margin-top: 20px; position: relative; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink); border-top: 1px solid var(--rule);
+  padding: 40px 5vw;
+}
+.footer-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 32px; margin-bottom: 32px;
+  padding-bottom: 32px; border-bottom: 1px solid var(--rule);
+}
+.footer-brand { }
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.footer-name { font-weight: 700; font-size: 15px; }
+.footer-tagline { font-size: 12px; color: var(--mist); margin-top: 2px; }
+.footer-desc { font-size: 13px; color: var(--mist); max-width: 260px; line-height: 1.6; margin-top: 10px; }
+
+.footer-links-group { }
+.footer-links-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mist); margin-bottom: 14px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: var(--silver); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 12px; color: var(--mist); }
+
+.enterprise-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 8px 16px; text-decoration: none; color: var(--silver);
+  font-size: 13px; font-weight: 500; transition: all 0.2s;
+}
+.enterprise-link:hover { border-color: var(--ruleHi); color: var(--white); }
+.enterprise-link::before { content: '←'; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .programs-grid, .advantage-grid { grid-template-columns: 1fr; }
+  .outcomes-wrap { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .enroll-wrap { padding: 48px 28px; }
+}
+@media (max-width: 600px) {
+  .hero-hook { flex-direction: column; gap: 8px; }
+  .stat-row { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">
+    <div class="nav-mark">A</div>
+    <div>
+      <div class="nav-name">Nonnytech Academy</div>
+      <div class="nav-sub">Learn · Build · Earn</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#advantage">Why Academy</a></li>
+    <li><a href="#outcomes">Outcomes</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://wa.me/2349067855807?text=Hi%20Nonnytech%20Academy!%20I%20want%20to%20enrol.%20Please%20tell%20me%20more." target="_blank" class="nav-cta">Enrol Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Now accepting new students — Awka &amp; Online</div>
+    <h1 class="hero-h1">
+      Master the<br />
+      <em>High-Income Skills</em><br />
+      of the AI Era.
+    </h1>
+    <p class="hero-sub">
+      Learn to build AI-powered tools and professional websites for real businesses. No prior coding experience needed. Start earning immediately after training.
+    </p>
+    <div class="hero-hook">
+      <div class="hook-item"><span>✓</span> Hands-on, project-based learning</div>
+      <div class="hook-item"><span>✓</span> Online &amp; In-person in Awka</div>
+      <div class="hook-item"><span>✓</span> No coding experience required</div>
+      <div class="hook-item"><span>✓</span> Affordable fees</div>
+    </div>
+    <div class="hero-actions">
+      <a href="#programs" class="btn-lime">View Training Programs →</a>
+      <a href="https://wa.me/2349067855807?text=Hi%20Nonnytech%20Academy!%20I%20want%20to%20know%20more%20about%20the%20programs." target="_blank" class="btn-outline">💬 Chat With Us</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><div class="trust-icon">🎓</div> Real projects from day one</div>
+      <div class="trust-item"><div class="trust-icon">💰</div> Start earning immediately after</div>
+      <div class="trust-item"><div class="trust-icon">📍</div> Awka, Anambra &amp; Online</div>
+      <div class="trust-item"><div class="trust-icon">🤝</div> 1-on-1 mentorship available</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="eyebrow">Training Programs</div>
+  <h2 class="section-h2">Three paths to<br />a high-income tech career</h2>
+  <p class="section-sub">Every program is built around real projects — the same kind of tools Nonnytech builds for businesses every day.</p>
+
+  <div class="programs-grid">
+
+    <div class="program-card">
+      <div class="program-num">PROGRAM 01</div>
+      <div class="program-icon" style="background:rgba(59,130,246,0.12)">🤖</div>
+      <div class="program-name">AI Tool Development</div>
+      <p class="program-focus">Build AI-powered customer service tools, quote generators, and chatbots for real businesses — using the same technologies that power tools deployed for live clients today.</p>
+      <ul class="program-highlights">
+        <li>Build AI tools completely from scratch</li>
+        <li>No coding experience required to start</li>
+        <li>Hands-on, project-based — you build real things</li>
+        <li>Learn to price and sell your tools to clients</li>
+        <li>Certificate of completion issued</li>
+      </ul>
+      <a href="https://wa.me/2349067855807?text=Hi!%20I%20am%20interested%20in%20the%20AI%20Tool%20Development%20program.%20Please%20tell%20me%20more." target="_blank" class="program-cta outline">Enquire About This Program</a>
+      <div class="program-fee">Affordable fee · <span>Chat for details</span></div>
+    </div>
+
+    <div class="program-card featured">
+      <div class="program-badge">Most Popular</div>
+      <div class="program-num">PROGRAM 02</div>
+      <div class="program-icon" style="background:rgba(132,204,22,0.1)">🌐</div>
+      <div class="program-name">Professional Website Development</div>
+      <p class="program-focus">Design and deploy mobile-ready business portals and modern landing pages from scratch. By the end you'll have a live website in your portfolio and the skills to charge clients immediately.</p>
+      <ul class="program-highlights">
+        <li>Design modern, mobile-ready business websites</li>
+        <li>Deploy live to the internet — real URL, real site</li>
+        <li>Build your portfolio from day one</li>
+        <li>Start earning from clients immediately after training</li>
+        <li>Certificate of completion issued</li>
+      </ul>
+      <a href="https://wa.me/2349067855807?text=Hi!%20I%20am%20interested%20in%20the%20Website%20Development%20program.%20Please%20tell%20me%20more." target="_blank" class="program-cta lime">Enquire About This Program</a>
+      <div class="program-fee">Affordable fee · <span>Chat for details</span></div>
+    </div>
+
+    <div class="program-card">
+      <div class="program-num">PROGRAM 03</div>
+      <div class="program-icon" style="background:rgba(245,158,11,0.1)">🚀</div>
+      <div class="program-name">Full AI Business Mentorship</div>
+      <p class="program-focus">The complete roadmap to running your own AI services business. We cover everything — building the tools, finding clients, pricing your services, and scaling to your first consistent income.</p>
+      <ul class="program-highlights">
+        <li>AI tools + websites + business skills in one programme</li>
+        <li>Client acquisition — how to find and close your first client</li>
+        <li>Pricing strategy — what to charge and how to justify it</li>
+        <li>1-on-1 personalised guidance throughout</li>
+        <li>Support until you land your first paying client</li>
+      </ul>
+      <a href="https://wa.me/2349067855807?text=Hi!%20I%20am%20interested%20in%20the%20Full%20AI%20Business%20Mentorship.%20Please%20tell%20me%20more." target="_blank" class="program-cta outline">Enquire About This Program</a>
+      <div class="program-fee">Affordable fee · <span>Most complete programme</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ADVANTAGE -->
+<section id="advantage">
+  <div class="eyebrow">The Nonnytech Advantage</div>
+  <h2 class="section-h2">Why students choose<br />Nonnytech Academy</h2>
+  <p class="section-sub">We don't just teach theory. We teach you exactly what works — because we do it ourselves every day for real clients.</p>
+
+  <div class="advantage-grid">
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(59,130,246,0.12)">🛠</div>
+      <div class="advantage-title">Learn by Doing</div>
+      <p class="advantage-desc">Every student builds real-world projects from the very first session — like shipping quote generators, AI chatbots, hotel booking systems, and live business websites. You graduate with a working portfolio, not just a certificate.</p>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(132,204,22,0.1)">💰</div>
+      <div class="advantage-title">Immediate Income Potential</div>
+      <p class="advantage-desc">We don't just teach you how to build — we teach you how to price, package, and sell your services to businesses. Many students begin earning before they even complete their programme by taking on their first client.</p>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(245,158,11,0.1)">🎯</div>
+      <div class="advantage-title">Accessible &amp; Affordable</div>
+      <p class="advantage-desc">Professional-grade training designed to be affordable for everyone — whether you're a fresh graduate, a business owner wanting to learn, or someone looking to switch to a high-income tech career. No prior experience required.</p>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(139,92,246,0.1)">🤝</div>
+      <div class="advantage-title">Taught by Practitioners</div>
+      <p class="advantage-desc">Your trainer is the same person who builds and deploys AI tools for real businesses — including live logistics systems, hotel management tools, and restaurant automation. You learn from someone who does it daily.</p>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(34,197,94,0.1)">📍</div>
+      <div class="advantage-title">Local &amp; Online</div>
+      <p class="advantage-desc">In-person sessions in Awka, Anambra — so you get face-to-face support if you need it. Online sessions also available so students across Nigeria and beyond can access the same quality training.</p>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon" style="background:rgba(239,68,68,0.1)">🏆</div>
+      <div class="advantage-title">Real Certificate. Real Skills.</div>
+      <p class="advantage-desc">You graduate with a Nonnytech Academy certificate, a live portfolio of real projects, and the practical skills to start working with clients immediately — not someday, right away.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section id="outcomes">
+  <div class="eyebrow">Student Outcomes</div>
+  <h2 class="section-h2">What you'll be able to do<br />when you graduate</h2>
+  <p class="section-sub">These aren't just learning objectives — they're real, income-generating skills you'll have by the end of your programme.</p>
+
+  <div class="outcomes-wrap">
+    <div class="outcomes-left">
+      <div class="outcome-item">
+        <div class="outcome-num">01</div>
+        <div>
+          <div class="outcome-title">Build and deploy AI tools for businesses</div>
+          <p class="outcome-desc">Create customer service chatbots, quote generators, email responders, and more — and deploy them live online for paying clients.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">02</div>
+        <div>
+          <div class="outcome-title">Design and launch professional websites</div>
+          <p class="outcome-desc">Build mobile-ready, modern business websites from scratch and host them live — a service businesses across Nigeria desperately need.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">03</div>
+        <div>
+          <div class="outcome-title">Find, pitch, and close your first client</div>
+          <p class="outcome-desc">Know exactly how to approach business owners, what to say, how to price your services, and how to get paid — even before you finish training.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">04</div>
+        <div>
+          <div class="outcome-title">Run your own AI services business</div>
+          <p class="outcome-desc">Graduate with the tools, skills, portfolio, and business knowledge to operate independently — serving clients locally or remotely across Africa and beyond.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="outcomes-right">
+      <div class="quote-box">
+        <div class="quote-text">"The tool handles customer enquiries automatically and generates quotes instantly. It saves us significant time every single day."</div>
+        <div class="quote-author"><strong>— Management, Wait &amp; Carry Logistics</strong><br />Built by a Nonnytech-trained developer</div>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-num">3x</div><div class="stat-label">Faster responses</div></div>
+          <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Automation uptime</div></div>
+          <div class="stat-box"><div class="stat-num">48h</div><div class="stat-label">Brief to live</div></div>
+          <div class="stat-box"><div class="stat-num">₦0</div><div class="stat-label">Extra staff needed</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="eyebrow">FAQ</div>
+  <h2 class="section-h2">Common questions<br />answered honestly</h2>
+  <p class="section-sub">No fluff — just straight answers.</p>
+
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">Do I need any coding experience to join?</div>
+      <p class="faq-a">Absolutely not. All three programmes are designed from the ground up for people with zero coding background. If you can use a smartphone, you can learn this.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How soon can I start earning after training?</div>
+      <p class="faq-a">Many students start approaching clients before they even finish the programme. By the time you graduate, you'll have a live portfolio and the pitch skills to close your first deal.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are sessions online or in-person?</div>
+      <p class="faq-a">Both. In-person sessions run in Awka, Anambra. Online sessions are available for students across Nigeria and beyond. You choose what works for you.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What equipment do I need?</div>
+      <p class="faq-a">A laptop and a stable internet connection are ideal. If you only have a smartphone, contact us — we'll discuss what's possible for your situation.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much does training cost?</div>
+      <p class="faq-a">Fees are kept affordable and vary by programme. Chat with us on WhatsApp to get the current fee structure — we'll be transparent about every cost upfront.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will I get a certificate?</div>
+      <p class="faq-a">Yes — every graduate receives a Nonnytech Academy certificate of completion. More importantly, you'll have a live portfolio of real projects that speaks louder than any certificate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL CTA -->
+<section id="enroll">
+  <div class="enroll-wrap">
+    <div class="enroll-glow"></div>
+    <div class="enroll-icon">🎓</div>
+    <h2 class="enroll-h2">Ready to Start Your Journey?</h2>
+    <p class="enroll-sub">Join our next session in Awka or join us online. Affordable fees, real projects, real results. Your first step into a high-income tech career starts with one message.</p>
+    <div class="enroll-actions">
+      <a href="https://wa.me/2349067855807?text=Hi%20Nonnytech%20Academy!%20I%20am%20ready%20to%20enrol.%20Please%20tell%20me%20about%20the%20next%20session%20and%20fees." target="_blank" class="btn-lime">💬 Chat to Enrol on WhatsApp</a>
+      <a href="mailto:frankchukwunonso1@gmail.com" class="btn-outline">✉ Email Us</a>
+    </div>
+    <div class="enroll-note">We respond within 24 hours · No commitment required to enquire</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="nav-mark">A</div>
+        <div>
+          <div class="footer-name">Nonnytech Academy</div>
+          <div class="footer-tagline">Learn · Build · Earn</div>
+        </div>
+      </div>
+      <p class="footer-desc">Practical, affordable AI and web development training for aspiring tech entrepreneurs across Africa.</p>
+    </div>
+    <div class="footer-links-group">
+      <div class="footer-links-title">Programs</div>
+      <ul class="footer-links">
+        <li><a href="#programs">AI Tool Development</a></li>
+        <li><a href="#programs">Website Development</a></li>
+        <li><a href="#programs">Full AI Business Mentorship</a></li>
+      </ul>
+    </div>
+    <div class="footer-links-group">
+      <div class="footer-links-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/2349067855807" target="_blank">WhatsApp: +234 906 785 5807</a></li>
+        <li><a href="mailto:frankchukwunonso1@gmail.com">frankchukwunonso1@gmail.com</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Nonnytech Academy · A division of Nonnytech</div>
+    <a href="https://frankchukwunonso1-dev.github.io/nonnytech/" class="enterprise-link">Looking for Business Solutions? Visit Nonnytech Enterprise</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.program-card, .advantage-card, .faq-item, .outcome-item').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
